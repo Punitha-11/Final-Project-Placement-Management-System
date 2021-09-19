@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin</title>
+<style>
+.style1 {
+ 
+  padding: 100px;
+  background: url(https://cdn.pixabay.com/photo/2014/10/08/09/01/career-479578_960_720.jpg);
+  background-repeat: no-repeat;
+  background-size: 1150px 650px;
+}
+</style>
+
+</head>
+<body >
+<div class=style1>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+
+   <h1><b style="color:Skyblue;">Welcome!!!</b></h1><br>
+   <h2><B style="color:maroon;" > PLACEMENT MANAGEMENT </b></h1><BR>
+   
+   <b style="color:white">PLACEMENT DETAILS</b> &nbsp;&nbsp;&nbsp;<a th:href="@{'/placementindex'}"><input type="submit" class="btn btn-info" value="Open" /></a><br><br><br>
+   <b style="color:white">COLLEGE DETAILS</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a th:href="@{'/collegeindex'}"><input type="submit" class="btn btn-info" value="Open" /></a><br><br><br>
+   <b style="color:white">STUDENT DETAILS</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a th:href="@{'/studentindex'}"><input type="submit" class="btn btn-info" value="Open" /></a><br><br><br>
+   
+   <form th:action="@{/logout}" method="post">
+        <input type="submit"  value="Logout" />
+    </form>
+    </div>
+</body>
+</html>

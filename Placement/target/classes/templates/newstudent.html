@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+<div align="center">
+    <div>
+    <h1>Create New Student Data</h1>
+   <br />
+   <tr>
+		<div align = "left" >		   
+		     <h3><a  th:href="@{'/studentindex'}">StudentData</a></h3>     
+	    </div>
+	
+	</tr>
+   </div>
+     <div class="col-sm-4">
+    <form action="#" th:action="@{/savestudent}" th:object="${student}" method="post">
+ 
+      
+ 		<div alight="left">
+            <tr>
+                <label class="form-label" >Student Name</label>
+                <td>
+	                <input type="hidden" th:field="*{id}" />
+	                <input type="text" th:field="*{studentname}" class="form-control" placeholder="Student Name" />
+                </td>
+            </tr>
+         </div>   
+            
+          	<div alight="left">
+          
+            <tr>
+                 <label class="form-label" >Course</label>
+                <td><input type="text" th:field="*{course}" class="form-control" placeholder="Course" /></td>
+            </tr>
+            </div> 
+         
+         
+         
+            <div alight="left">
+            	<div alight="left">
+          
+            <tr>
+                 <label class="form-label" >Percentage(%)</label>
+                <td><input type="text" th:field="*{percentage}" class="form-control" placeholder="Percentage" /></td>
+            </tr>
+            </div> 
+         
+            
+            
+            <div alight="left">
+                 <tr>
+                 <label class="form-label" >MailId</label>
+                <td><input type="text" th:field="*{mailid}" class="form-control" placeholder="MailId" /></td>
+            </tr>
+            </div> 
+            
+            
+            <div alight="left">
+                 <tr>
+                 <label class="form-label" >College</label>
+                <td><input type="text" th:field="*{college}" class="form-control" placeholder="College" /></td>
+            </tr>
+            </div> 
+            
+            <div alight="left">
+                 <tr>
+                 <label class="form-label" >Roll</label>
+                <td><input type="text" th:field="*{roll}" class="form-control" placeholder="Roll" /></td>
+            </tr>
+            </div> 
+            
+            <div alight="left">
+                 <tr>
+                 <label class="form-label" >Qualification</label>
+                <td><input type="text" th:field="*{qualification}" class="form-control" placeholder="Qualification" /></td>
+            </tr>
+            </div> 
+            
+            <div alight="left">
+                 <tr>
+                 <label class="form-label" >HallticketNo</label>
+                <td><input type="text" th:field="*{hallticketno}" class="form-control" placeholder="HallticketNo" /></td>
+            </tr>
+            </div> 
+            
+            
+            
+            
+			<br>
+            <tr>
+            <td colspan="2"><button type="submit" class="btn btn-info">Save</button> </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

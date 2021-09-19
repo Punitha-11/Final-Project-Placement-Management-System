@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html >
+ 
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+<div>
+	<h1 >Placement Registation</h1>
+	<tr>
+		<div align = "left" >		   
+		     <h3><a  th:href="@{'/placementnew'}">Add new</a></h3> 
+		        <h3><a  th:href="@{'/adminindex'}">Home</a></h3>    
+	    </div>
+	
+	</tr>
+	<tr>
+	
+	<div class="col-sm-7" align = "center">
+                 <div class="panel-body" align = "center" >
+                 <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      		<th>ID</th>
+            <th>Name</th>
+            <th>College</th>
+            <th>Date</th>
+            <th>Qualification</th>
+            <th>Year</th>
+            <th>Edit</th>
+            <th>Delete</th>
+   	</tr>
+  </thead>
+  <tbody>
+      <tr  th:each="placement : ${listplacement }">
+		<td th:text="${placement.id}">ID</td>
+		<td th:text="${placement.name}">Name</td>		
+		<td th:text="${placement.college}">College</td>
+		<td th:text="${placement.date}">Date</td>	
+		<td th:text="${placement.qualification}">Qualification</td>	
+		<td th:text="${placement.year}">Year</td>			
+		<td><a th:href="@{'/edit/' + ${placement.id}}">Edit</a>
+		</td>							    
+		<td><a th:href="@{'/delete/' + ${placement.id}}">Delete</a>
+		</td>		    
+		</tr> 
+   
+  </tbody>
+</table>
+                    
+                 </div>
+ 
+            </div> 
+ 
+	</tr>
+ 
+	</tbody>
+	</table>
+	<div>
+</body>
+</html>
